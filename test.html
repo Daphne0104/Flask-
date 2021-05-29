@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    歡迎光臨.今天是{{ var }} <br>
+    今天值班: <br>
+    {% for data in list %}
+        {# 控制循環#}
+        <li>{{ data }}</li>
+    {% endfor %}
+{#    服務器會直接傳回渲染過後的頁面，所以看元代碼的時候不會看到html格式#}
+     任務:<br>
+        {# 了解一下如何在頁面打印表格，以及如何迭代       #}
+    <table border="1">
+       {% for key,value in task.items() %}
+{#         [(key,value),(key,value)....]       #}
+        <tr>
+            <td>{{ key }}</td>
+            <td>{{ value }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>
