@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{#        #利用動態域名，避免路徑鎖死 #}
+<form action="{{ url_for('result' }}" method="post">
+    <p> 姓名: <input type="text" name="姓名"></p>
+    <p> 年齡: <input type="text" name="年齡"></p>
+    <p> 性別: <input type="text" name="性別"></p>
+    <p> 地址: <input type="text" name="地址"></p>
+    <p><input type="submit" value="提交"></p>
+</form>
+
+
+</body>
+</html>
